@@ -36,9 +36,6 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    lintOptions {
-        disable 'InvalidPackage'
-    }
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
@@ -60,6 +57,10 @@ android {
             proguardFiles "${background_geolocation.projectDir}/proguard-rules.pro"
         }
     }
+    lint {
+        disable 'InvalidPackage'
+    }
+    namespace 'com.transistorsoft.flutter.backgroundgeolocation.backgroundgeolocationfirebaseexample'
 }
 
 flutter {
